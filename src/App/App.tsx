@@ -13,7 +13,7 @@ interface AppState {
 
 export class App extends React.Component<{}, AppState> {
 
-  constructor(props: {}) {
+  constructor (props: {}) {
     super(props)
     debug('app constructor')
     this.state = {
@@ -23,18 +23,15 @@ export class App extends React.Component<{}, AppState> {
     }
   }
 
-  render() {
+  render () {
     return (
       <div className="app">
-        State: {'' + this.state.currentSection}
-        <Perspective />
+        <Menu>
 
-        {/* <div className="menu">
-          Menu:
-          <Menu />
-        </div>
-        <div className="content">
-        </div> */}
+        </Menu>
+        <Content>
+          <Perspective />
+        </Content>
       </div>
     )
   }
